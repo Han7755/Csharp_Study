@@ -15,12 +15,9 @@ namespace b1316
     {
         static public bool IsGroupWord(string word)
         {
-            List<char> eachChar = new List<char>();
             for (int i = 0; i < word.Length - 1; i++)
             {
-                eachChar.Add(word[i]);
-
-                if ((word[i + 1] != eachChar[i]) && (word.IndexOf(eachChar[i], i + 1) != -1))
+                if ((word[i + 1] != word[i]) && (word.IndexOf(word[i], i + 1) != -1))
                 {
                     return false;
                 }
